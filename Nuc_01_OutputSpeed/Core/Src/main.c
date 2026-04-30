@@ -100,9 +100,9 @@ int main(void)
     // CMSIS - ODR
     // GPIOB->ODR ^= (1 << 8);
 
-    // CMSIS - BSRR
-     GPIOB->BSRR = (1 << 8); // Set pin 8
-     GPIOB->BSRR = (1 << (8 + 16)); // Reset pin 8
+     // CMSIS - BSRR
+     // GPIOB->BSRR = (1 << 8); // Set pin 8
+     // GPIOB->BSRR = (1 << (8 + 16)); // Reset pin 8
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
