@@ -14,13 +14,7 @@ This repository contains embedded C projects for **STM32F103** (Cortex-M3) using
 ├── Nuc_00_Empty_CMSIS/        # Nucleo (STM32F103RB)     — CMSIS-only base project
 ├── 01_Nuc_Output_Speed_GPIO/  # GPIO Output Speed register analysis
 ├── Nuc_01_OutputSpeed/        # GPIO toggle frequency measurement
-├── Nuc_02_Compiler_Optimierung/ # Compiler optimization comparison (O0/Og/O1/Os/O2)
-└── Bsp/
-    └── blog/                  # Blog articles (Hugo content)
-        ├── stm32-hal-vs-cmsis-gpio-toggle/
-        ├── stm32-gpio-output-speed/
-        ├── stm32-gpio-cpu-headroom/
-        └── stm32-gpio-compiler-optimizations/
+└── Nuc_02_Compiler_Optimierung/ # Compiler optimization comparison (O0/Og/O1/Os/O2)
 ```
 
 ### Project Details
@@ -32,15 +26,6 @@ This repository contains embedded C projects for **STM32F103** (Cortex-M3) using
 | [`01_Nuc_Output_Speed_GPIO`](./01_Nuc_Output_Speed_GPIO) | STM32F103RB | GPIO output speed register (OSPEEDR) analysis. Demonstrates that speed settings affect **slew rate**, not toggle frequency. |
 | [`Nuc_01_OutputSpeed`](./Nuc_01_OutputSpeed) | STM32F103RB | GPIO toggle frequency measurement with HAL, ODR-XOR, and BSRR methods at different optimization levels. |
 | [`Nuc_02_Compiler_Optimierung`](./Nuc_02_Compiler_Optimierung) | STM32F103RB | Systematic comparison of all GCC optimization levels (-O0, -Og, -O1, -Os, -O2). Disassembly analysis included. |
-
-### Blog Articles
-
-| Article | Topic |
-|---------|-------|
-| [HAL vs CMSIS GPIO Toggle](./Bsp/blog/stm32-hal-vs-cmsis-gpio-toggle) | Performance comparison of `HAL_GPIO_TogglePin()` vs ODR-XOR vs BSRR |
-| [GPIO Output Speed](./Bsp/blog/stm32-gpio-output-speed) | What the OSPEEDR register actually does (slew rate, not frequency) |
-| [CPU Headroom](./Bsp/blog/stm32-gpio-cpu-headroom) | The perspective shift: measuring CPU reserve, not peak frequency |
-| [Compiler Optimizations](./Bsp/blog/stm32-gpio-compiler-optimizations) | How -O0 through -O2 affect generated assembly and toggle rates |
 
 ---
 
